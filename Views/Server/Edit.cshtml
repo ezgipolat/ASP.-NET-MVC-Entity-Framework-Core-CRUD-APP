@@ -1,0 +1,30 @@
+@model ServerInventoryApp.Models.Server
+
+@{
+    ViewData["Title"] = "Sunucu Düzenle";
+}
+
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IPAddress" class="control-label"></label>
+        <input asp-for="IPAddress" class="form-control" />
+        <span asp-validation-for="IPAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId" class="control-label"></label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="margin-top: 20px;">
+        <div class="d-flex justify-content-between">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+            <a class="btn btn-success" asp-action="Index">Listeye Geri Dön</a>
+        </div>
+    </div>
+</form>

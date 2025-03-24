@@ -1,0 +1,63 @@
+@model ServerInventoryApp.Models.Server
+
+@{
+    ViewData["Title"] = "Sunucu Detayları";
+}
+
+<h2 class="text-center text-success">@ViewData["Title"]</h2> <!-- Change the text color to green -->
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white"> <!-- Green header -->
+                    <h4 class="mb-0">Sunucu Bilgileri</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3 font-weight-bold">Ad</dt>
+                        <dd class="col-sm-9">@Model.Name</dd>
+
+                        <dt class="col-sm-3 font-weight-bold">IP Adresi</dt>
+                        <dd class="col-sm-9">@Model.IPAddress
+                            
+                        </dd>
+
+                        <dt class="col-sm-3 font-weight-bold">Kategori</dt>
+                        <dd class="col-sm-9">@Model.Category.Name</dd>
+                    </dl>
+                </div>
+                <div class="card-footer text-right">
+                    <a class="btn btn-success" asp-action="Index">
+                        <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 10px;
+        }
+        .card-header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-body {
+            background-color: #f9f9f9;
+        }
+        .btn {
+            border-radius: 20px;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+}

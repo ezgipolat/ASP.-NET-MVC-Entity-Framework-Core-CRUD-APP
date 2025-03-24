@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+.btn-pastel-success {
+  color: white;
+  background-color: #A8D5BA;  /* Pastel Yeşil (açık yeşil) */
+  border-color: #A8D5BA;
+}
+
+.btn-pastel-success:hover {
+  background-color: #7FBF97;  /* Daha koyu pastel yeşil */
+  border-color: #7FBF97;
+}
+
+.btn-pastel-info {
+  color: white;
+  background-color: #B9E4C9;  /* Pastel yeşil tonları */
+  border-color: #B9E4C9;
+}
+
+.btn-pastel-info:hover {
+  background-color: #98D1A6;  /* Daha koyu pastel yeşil */
+  border-color: #98D1A6;
+}
+
+.btn-pastel-danger {
+  color: white;
+  background-color: #D1F2E4;  /* Pastel yeşil tonunda kırmızımsı */
+  border-color: #D1F2E4;
+}
+
+.btn-pastel-danger:hover {
+  background-color: #A6D9B2;  /* Daha koyu pastel kırmızımsı yeşil */
+  border-color: #A6D9B2;
+}
